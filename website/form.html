@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Bootstrap -->
+        <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!--touchspin-->
+        <link rel="stylesheet" href="assets/bootstrap/touchspin/dist/jquery.bootstrap-touchspin.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <title>New-Edit_WoD</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <img src="assets/images/logo.png" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-xs-12 col-md-6" style="text-align: right">
+                        <p class="name" style="float:right; padding: 13px 16px;border-left: 2px solid"><span class="glyphicon glyphicon-user" aria-hidden="true" style="margin: 0px 10px;
+                            border: 2px solid;
+                            border-radius: 100%;
+                            padding: 5px;"></span>Cesar Cordova<span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="margin: 0px 10px;"></span></p>
+                        <button type="button" class="btn btn-default btn-lg" style="border: none; color: blue; float: right; margin: 8px auto;">
+                            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> History
+                          </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <p>
+                Wod Name: <input type="text" name="wodName" value="" id="wodName"required>
+                <br>
+                Rest between laps: <input type="number" name="restSec"id="restSec" value="Seconds" placeholder="Seconds">
+                <!--<br>
+                <input id="demo3" type="text" value="" name="demo3" required>
+            </form>
+            <hr>
+            <form>
+                <div class="col-xs-12 col-sm-6"><input type="radio" name="type" value="warmup"> This is a warm up</div>
+                <div class="col-xs-12 col-sm-6"><input type="radio" name="type" value="wod"> This is a WoD</div>
+                <div class="col-xs-12 col-sm-6">
+                    Exercise Time: <input type="text" name="extime" value="" required>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    Rest Time: <input type="text" name="restime" value="" required>
+                </div>
+                <div class="col-xs-12">
+                    Exercise Name: <input type="text" name="exname" value="" required>
+                </div>
+                <div class="col-xs-12">
+                    Youtube Video: <input type="url" name="youtubevid" id="youtubevid">
+                </div>
+                <div class="col-xs-12">
+                    Select Lap: 
+                </div>-->
+                <button id="submit">submit</button>
+            </p>
+        </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <!--touchspin-->
+    <script src="assets/bootstrap/touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+    <!--P5-->
+    <script src="assets/js/p5.min.js"></script>
+    <script src="assets/js/p5.dom.js"></script>
+    <!--Custom Script-->
+    <script src="assets/js/main.js"></script>
+    <script>
+        $("input[name='demo3']").TouchSpin();
+    </script>
+    </body>
+</html>

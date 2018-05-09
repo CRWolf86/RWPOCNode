@@ -1,0 +1,11 @@
+This app was made using the following tools:
+
+Nodejs
+Expressjs
+P5js
+bootstrap
+jquery
+
+To run the server and the program you only need to go to the console and 
+once you are on the Rulesware folder type "node app" a message saying that the server is running will be displayed.
+On your browser go to localhost:300 and you will arrive to the index page.
