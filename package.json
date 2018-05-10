@@ -1,0 +1,26 @@
+{
+  "name": "rwpocnode",
+  "version": "1.0.0",
+  "description": "poc for r&d",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CRWolf86/RWPOCNode.git"
+  },
+  "keywords": [
+    "POC"
+  ],
+  "author": "CesarCordova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CRWolf86/RWPOCNode/issues"
+  },
+  "homepage": "https://github.com/CRWolf86/RWPOCNode#readme"
+}

@@ -1,74 +1,23 @@
+var http = require('http');
 var fs = require('fs');
-var data = fs.readFileSync('wod.json');
-var words = JSON.parse(data);
-console.log(words);
 
-
-
-//console.log ('server is starting');
-
-var express = require('express');
-var app = express();
-var server= app.listen(3000, listening);
-function listening() {
-    console.log("Listening...");    
-}
-
-app.use(express.static('website'));
-
-
-app.get('/add/:word/:score', addWord);
-
-function addWord(request, response){
-    var data = request.params;
-    var word=data.word;
-    var score = Number(data.score);
-    var reply;
-    if (!score) {
-        reply={
-            msg: "Score is required."
-        }        
+var server = http.createServer(function(req, res){
+    console.log('request was made: ' + req.url);
+    if (req.url==='/' || req.url ==='/home' || req.url==='/index') {
+        res.writeHead(200,{'Content-Type':'text/html'});        
+        fs.createReadStream(__dirname+'/website/index.html').pipe(res);
+    }else if(req.url==='form'){
+        res.writeHead(200,{'Content-Type':'text/html'});        
+        fs.createReadStream(__dirname+'/website/form.html').pipe(res);
+    }else if (req.url === '/api/ninjas'){
+        var ninjas = [{name: 'Ryu', age: 29},{name: 'Yoshi', age: 32}];
+        res.writeHead(200,{'Content-Type':'application/json'});
+        res.end(JSON.stringify(ninjas));
     }else{
-        words[word] = score;
-        var data = JSON.stringify(words,null,2);
-        fs.writeFile('wod.json', data, finished)
-
-        function finished(err){
-            console.log('all set');
-            reply = {
-                word: word,
-                score: score,
-                msg: "thank you for your word."
-            }
-            response.send(reply);
-        }
-        
+        res.writeHead(404,{'Content-Type':'text/html'});
+        fs.createReadStream(__dirname + '/website/404.html').pipe(res);
     }
+});
 
-    }
-
-app.get('/all', sendAll);
-
-function sendAll(request, response){
-    response.send(words);
-}
-
-app.get('/search/:word/', searchWord);
-
-function searchWord(request, response) {
-    var word = request.params.word;
-    var reply;
-    if(words[word]){
-        reply={
-        status: "found",
-        word: word,
-        score:words[word] 
-        }    
-    }else {
-        reply={
-            status: "not found",
-            word: word 
-        }
-    }
-    response.send(reply);
-}
+server.listen(3000, '127.0.0.1');
+console.log('yo dawgs, now listening to port 3000');
