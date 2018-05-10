@@ -1,0 +1,12 @@
+/*--------form.html-------------*/
+form#newWOD hr{
+    border-top: 2px solid grey;
+}
+form#newWOD div.mitad{
+width:48%;
+display: inline-block;
+text-align: center;
+}
+form#newWOD div.boton{
+    text-align: center;
+}

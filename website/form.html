@@ -32,33 +32,40 @@
             </div>
         </header>
         <div class="container">
-            <p>
-                Wod Name: <input type="text" name="wodName" value="" id="wodName"required>
-                <br>
-                Rest between laps: <input type="number" name="restSec"id="restSec" value="Seconds" placeholder="Seconds">
-                <!--<br>
-                <input id="demo3" type="text" value="" name="demo3" required>
-            </form>
-            <hr>
-            <form>
-                <div class="col-xs-12 col-sm-6"><input type="radio" name="type" value="warmup"> This is a warm up</div>
-                <div class="col-xs-12 col-sm-6"><input type="radio" name="type" value="wod"> This is a WoD</div>
-                <div class="col-xs-12 col-sm-6">
-                    Exercise Time: <input type="text" name="extime" value="" required>
+            <form id="newWOD" action="">
+                <p>
+                    Wod Name: <input type="text" name="wodName" value="" id="wodName"required>
+                </p>
+                <p>
+                    Rest between laps: <input type="number" name="restSec"id="restSec" value="Seconds" placeholder="Seconds">
+                </p>
+                <p>
+                    Number of Laps<input id="demo3" type="text" value="" name="demo3" required>
+                </p>
+                <hr>
+                <div class="mitad">
+                    <p><input type="radio" name="type" id="warmup">This is a warm up</p>
                 </div>
-                <div class="col-xs-12 col-sm-6">
-                    Rest Time: <input type="text" name="restime" value="" required>
+                <div class="mitad"
+                    ><p><input type="radio" name="type" id="Wod">This is a WOD</p>
                 </div>
-                <div class="col-xs-12">
-                    Exercise Name: <input type="text" name="exname" value="" required>
+                <div class="mitad">
+                    <p>
+                        Exercise time: <input type="text" name="extime" value="" required>
+                    </p>
                 </div>
-                <div class="col-xs-12">
+                <div class="mitad">
+                        Rest Time: <input type="text" name="restime" value="" required>
+                </div>
+                <p>
                     Youtube Video: <input type="url" name="youtubevid" id="youtubevid">
+                </p>
+                <p>
+                    Select Lap: <input type="number" name="selectlap" id="selectlap">
+                </p>
+                <div class="boton">
+                    <button class="btn btn-primary" id="submit">Add Excercise</button>
                 </div>
-                <div class="col-xs-12">
-                    Select Lap: 
-                </div>-->
-                <button id="submit">submit</button>
             </p>
         </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
