@@ -1,31 +1,28 @@
-function setup(){
-    loadJSON('../all', gotData);
-    console.log("testing");
+$(document).ready(function(){
 
-    var button = select('#submit');
-    button.mousePressed(submitWord);
+    $('form').on('submit', function(){
+        var wodName = $('form #wodName');
+        var restSec = $('form #restSec');
+        var demo3 = $('form #demo3');
+        var warmup = $('form #warmup');
+        var Wod = $('form #Wod');
+        var extime = $('form #extime');
+        var restime = $('form #restime');
+        var youtubevid = $('form #youtubevid');
+        var selectlap = $('form #selectlap');
+        var exercise = {wodName: wodName.val(), restSec: restSec.val(), demo3: demo3.val(), warmup: warmup.val(), Wod: Wod.val(),extime: extime.val(),restime: restime.val(),youtubevid: youtubevid.val(),selectlap: selectlap.val() };
+    
+        $.ajax({
+            type: 'POST',
+            url: '/form',
+            data: exercise,
+            success: function(data){
+                location.reload();
+            }
+        })
+    
+    
+    
+    })
 
-}
-
-function submitWord(){
-    var word = select('#wodName').value();   
-    var score = select('#restSec').value();
-    console.log(word, score);
-
-    loadJSON('add/'+word+'/'+score, finished);
-
-    function finished(data) {
-        console.log(data);
-    }
-}
-
-function gotData(data){
-    console.log(data);
-    var keys = Object.keys(data);
-    for (var i = 0; i < keys.length; i++) {
-        var word = keys[i];
-        var score = data[word];
-
-    }
-    console.log(keys);
-}
+})
