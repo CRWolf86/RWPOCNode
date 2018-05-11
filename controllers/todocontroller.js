@@ -25,7 +25,7 @@ module.exports = function(app){
 
     app.delete('/form/:wodName', function(req,res){
         data = data.filter(function(exercise){
-            return exercise.wodName.replace(/ /g,'-') !== req.params.wodName;
+            return exercise.wodName.replace(/\-/g,'-') !== req.params.wodName;
         });
     });
 

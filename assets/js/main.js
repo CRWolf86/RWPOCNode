@@ -26,7 +26,7 @@ $(document).ready(function(){
     });
 
     $('td#borrar').on('click', function(){
-        var wodName = $(this).text().replace(/ /g,"-");
+        var wodName = $(this).text().replace(/\-/g,"-");
         console.log('clickeado');
         $.ajax({
             type: 'DELETE',
