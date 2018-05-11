@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 //json data
-var data=[{WOD: 'run', Laps: 2, ExpectedTime: '5 minutes'}, {WOD: 'jump', Laps: 1, ExpectedTime: '10 minutes'}];
+var data=[{wodName: 'run', selectlap: 2, extime: '5 minutes'}, {wodName: 'jump', selectlap: 1, extime: '10 minutes'}];
 
 module.exports = function(app){
 
@@ -15,7 +15,7 @@ module.exports = function(app){
     });
     
     app.get('/form', function(req, res){
-        res.render('form');
+        res.render('form',{exercise: data});
     });
     
     app.post('/form', urlencodedParser, function(req, res){
@@ -23,8 +23,10 @@ module.exports = function(app){
        res.json(data);
     });
 
-    app.delete('/form', function(req,res){
-
+    app.delete('/form/:wodName', function(req,res){
+        data = data.filter(function(exercise){
+            return exercise.wodName.replace(/ /g,'-') !== req.params.wodName;
+        });
     });
 
 };

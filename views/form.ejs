@@ -15,7 +15,7 @@
     <body>
             <% include partial/header.ejs %>    
         <div class="container">
-            <form id="newWOD" method="POST" action="/form">
+            <form id="newWOD">
                 <p>
                     Wod Name: <input type="text" name="wodName" value="" id="wodName"required>
                 </p>
@@ -64,11 +64,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td id="exname" name="exname"></td>
-                            <td id="lapnum" name="lapnum"></td>
-                            <td id="time" name="time"></td>
-                            <td id="video" name="video"></td>
-                            <td id="delete" name="delete"></td>
+                                <% for(var i=0; i < exercise.length; i++){ %>
+                                    <tr style="border: 1px solid; border-color: black;"></tr>
+                                        <td> <%= exercise[i].wodName %>  </td>
+                                        <td> <%= exercise[i].selectlap %>  </td>
+                                        <td> <%= exercise[i].extime %>  </td>
+                                        <td> <%= exercise[i].youtubevid %>  </td>
+                                        <td id="borrar"> Delete  </td>
+                                    </tr>
+                                   <% } %>
                         </tr>
                     </tbody>
                 </table>

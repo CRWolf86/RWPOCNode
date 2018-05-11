@@ -19,10 +19,24 @@ $(document).ready(function(){
             success: function(data){
                 location.reload();
             }
+        });
+
+        return false;
+    
+    });
+
+    $('td#borrar').on('click', function(){
+        var wodName = $(this).text().replace(/ /g,"-");
+        console.log('clickeado');
+        $.ajax({
+            type: 'DELETE',
+            url:'/form/'+wodName,
+            success: function(data){
+                //location.reload();
+                console.log('borrado');
+            }
         })
-    
-    
-    
     })
+
 
 })

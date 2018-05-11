@@ -10,3 +10,6 @@ text-align: center;
 form#newWOD div.boton{
     text-align: center;
 }
+div.tablas td#borrar{
+    cursor: pointer;
+}
