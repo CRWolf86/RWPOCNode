@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 //json data
-var data=[{wodName: 'run', selectlap: 2, extime: '5 minutes'}, {wodName: 'jump', selectlap: 1, extime: '10 minutes'}];
+var data=[{wodName: 'run', selectlap: 2, extime: '5 minutes', youtubevid:'https://www.youtube.com/watch?v=XZAg35GHCH4' }, {wodName: 'jump', selectlap: 1, extime: '10 minutes', youtubevid:'https://www.youtube.com/watch?v=l0gDqsSUtWo' }];
 
 module.exports = function(app){
 
