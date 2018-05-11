@@ -5,32 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!-- Bootstrap -->
-        <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
         <!--touchspin-->
-        <link rel="stylesheet" href="assets/bootstrap/touchspin/dist/jquery.bootstrap-touchspin.min.css">
+        <link rel="stylesheet" href="/assets/bootstrap/touchspin/dist/jquery.bootstrap-touchspin.min.css">
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
         <title>New-Edit_WoD</title>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-md-4">
-                        <img src="assets/images/logo.png" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-xs-12 col-md-8" style="text-align: right">
-                        <button type="button" class="btn btn-default btn-lg" style="border: none; color: blue; float: right; margin: 8px auto;">
-                            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> History
-                          </button>
-                          <p class="name" style="float:right; padding: 13px 16px;border-left: 2px solid"><span class="glyphicon glyphicon-user" aria-hidden="true" style="margin: 0px 10px;
-                            border: 2px solid;
-                            border-radius: 100%;
-                            padding: 5px;"></span>Cesar Cordova<span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="margin: 0px 10px;"></span></p>
-                    </div>
-                </div>
-            </div>
-        </header>
+            <% include partial/header.ejs %>    
         <div class="container">
             <form id="newWOD" method="POST" action="/form">
                 <p>
@@ -96,16 +79,16 @@
             </footer>
         </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.js"></script>
     <!--touchspin-->
-    <script src="assets/bootstrap/touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="/assets/bootstrap/touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
     <!--P5-->
-    <script src="assets/js/p5.min.js"></script>
-    <script src="assets/js/p5.dom.js"></script>
+    <script src="/assets/js/p5.min.js"></script>
+    <script src="/assets/js/p5.dom.js"></script>
     <!--Custom Script-->
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
     <script>
         $("input[name='demo3']").TouchSpin();
     </script>
